@@ -5,9 +5,11 @@
 <title>Cadastrar nova Cerveja</title>
 </head>
 
+</head>
+
 <body>
 
-  <form action="grava_nova_cerveja.php" method="post" name="cadasra_cervejas">    	
+  <form action="grava_nova_cerveja.php" method="post" name="cadastra_cervejas">    	
     <h1 align="center" > Cadastrar Cervejas</h1>
     <table border="1" bordercolor="#999999">
       <tr> 
@@ -19,28 +21,35 @@
         <td><input name="nome_cervejaria" placeholder="Nome da Fábrica da Cerveja" type="text" /></td>
       </tr>
       <tr>
-        <td>Estilo</td>  
-        <td><input name="estilo_cerveja" placeholder="Informe o Estilo da cerveja" type="text" /></td>
-      </tr>
-      <tr>
         <td>IBU</td>
-        <td><input name="ibu_cerveja" placeholder="IBU da Cerveja" type="text" /> </td>
+        <td><input patern="[0-9]{4}" required name="ibu_cerveja"   placeholder="IBU da Cerveja" type="text" /> </td>
       </tr>
       <tr>
         <td>ABV</td>
-        <td><input name="abv_cerveja" placeholder="Teor alcolico da Cerveja" type="text" /></td>
+        <td><input patern="[0-9]{4}" required name="abv_cerveja" placeholder="Teor alcolico da Cerveja" type="text" /></td>
       </tr>
       <tr>
         <td>Taça</td>
         <td><input name="taca_cerveja" placeholder="Modelo de Taça" type="text" /></td>
       </tr>
       <tr>
-        <td>Pratos</td>
-        <td><input name="prato_cerveja" placeholder="Harmonização" type="text" /></td>
+        <td>Pratos
+		  <td>
+            <label background><input type="checkbox" name="Prato" value="checkbox" id="CheckboxGroup1_0" />Churrasco</label>
+          </td>			
+      </td>
       </tr>
       <tr>
         <td>Coloração</td>
         <td><input name="coloracao_cerveja" placeholder="Coloração da Cerveja" type="text" /></td>
+      </tr>
+	  <tr>
+        <td>Estilo</td>  
+        <td><br><select name="Estado">
+        <option value "0" selected>Estilo</option>
+    		<option value="IPA"> India Pale Ale</option>
+    		<option value="STOUT"> Stout</option>               
+    	</select></td>
       </tr>
       <tr align="center">
        <td ><input type="submit" value="Cadastrar"/></td>
