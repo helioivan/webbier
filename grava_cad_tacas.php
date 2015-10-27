@@ -9,6 +9,6 @@
 	$dados = array($cervejaria);
 	$cadastra = $inserir->execute($dados);
 	
-	header ("Location: ./pagina_cad_tacas.html");
+	header ("Location: ./pagina_cad_tacas.php");
 	
  ?>

@@ -10,11 +10,11 @@
   $prato      = $_POST["prato"];
   $estilo     = $_POST["estilo"];
   
-  $inserir = $conexao_pdo->prepare("INSERT INTO cervejas (descricao_cerveja, hbv, ibu, prato_cerveja, taca_cerveja, cervejaria_cerveja) VALUES (?,?,?,?,?,?,?)");
+  $inserir = $conexao_pdo->prepare("INSERT INTO cervejas (DESCRICAO_CERVEJA, HBV, IBU, PRATO_CERVEJA, TACA_CERVEJA, CERVEJARIA_CERVEJA) VALUES (?, ?, ?, ?, ?, ?)");
   
-	$dados = array($cervejaria);
+	$dados = array($cerveja, $abv, $ibu, $prato, $taca, $cervejaria);
 	$cadastra = $inserir->execute($dados);
 	
-	header ("Location: ./pagina_cad_cerveja.html");
+	header ("Location: ./pagina_cad_cerveja.php");
 	
- ?>
+?>

@@ -4,11 +4,11 @@
   
   $estilo = $_POST["nome_estilo"];
   
-  $inserir = $conexao_pdo->prepare("INSERT INTO estilos (descricao_estilo) VALUES (?)");
+  $inserir = $conexao_pdo->prepare("INSERT INTO estilos (DESCRICAO_ESTILO) VALUES (?)");
   
-	$dados = array($cervejaria);
+	$dados = array($estilo);
 	$cadastra = $inserir->execute($dados);
 	
-	header ("Location: ./pagina_cad_estilo.html");
+	header ("Location: ./pagina_cad_estilo.php");
 	
  ?>
